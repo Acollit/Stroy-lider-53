@@ -1,0 +1,79 @@
+.hero {
+  padding-top: 208px;
+  padding-bottom: 290px;
+  margin-bottom: 160px;
+  background-image: url(../img/hero-bg.webp);
+  background-size: cover;
+  background-position: center;
+
+  &__content {
+    max-width: 738px;
+    width: 100%;
+    padding: 20px 0px 20px 16px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 161%;
+    letter-spacing: -0.02em;
+    color: var(--gray---9o);
+
+    &--accent {
+      color: var(--secondary-7o);
+    }
+  }
+
+  &__text {
+    position: relative;
+    padding-left: 68px;
+    margin: 0;
+    margin-bottom: 50px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+    color: var(--gray---9o);
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      left: 0;
+      top: -15px;
+      background-image: url(../img/point.png);
+      background-size: cover;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    gap: 32px;
+
+  }
+
+  &__btn {
+    max-width: 134px;
+  }
+
+  &__link {
+    display: block;
+    max-width: 165px;
+    width: 100%;
+    padding: 17px 10px;
+    border-radius: 8px;
+    background: var(--primary---2o);
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--primary-5o);
+  }
+}

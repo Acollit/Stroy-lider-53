@@ -1,0 +1,29 @@
+.section-stocks {
+  margin-bottom: 100px;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__arrow-left {
+    position: absolute;
+    width: 57px;
+    height: 56px;
+    left: -78px;
+    top: calc(50% - 28px);
+    background-image: url(../img/left.svg);
+    z-index: 5;
+  }
+
+  &__arrow-right {
+    position: absolute;
+    width: 57px;
+    height: 56px;
+    right: -78px;
+    top: calc(50% - 28px);
+    background-image: url(../img/right.svg);
+    z-index: 5;
+  }
+
+  &__swiper {}
+}

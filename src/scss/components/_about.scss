@@ -1,0 +1,124 @@
+.about {
+
+  margin-bottom: 160px;
+
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  &__left {
+    max-width: 748px;
+    width: 100%;
+    padding: 55px 28px;
+    border-radius: 20px;
+    background: var(--white);
+    background-image: url(../img/about-bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 24px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: var(--gray---9o);
+  }
+
+  &__text {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: var(--gray---7o);
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    max-width: 233px;
+    width: 100%;
+    padding: 22px 16px;
+    border-radius: 12px;
+    background: var(--white);
+  }
+
+  &__name {
+    margin: 0;
+    font-family: var(--font5);
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 115%;
+    color: var(--primary-5o);
+  }
+
+  &__descr {
+    max-width: 90px;
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--gray---9o);
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__swiper {
+    .image {
+      border-radius: 24px;
+    }
+
+    .swiper-slide {
+      max-width: 490px;
+
+    }
+  }
+
+  &__arrow-left {
+    position: absolute;
+    width: 57px;
+    height: 56px;
+    left: -78px;
+    top: calc(50% - 28px);
+    background-image: url(../img/left.svg);
+    z-index: 5;
+  }
+
+  &__arrow-right {
+    position: absolute;
+    width: 57px;
+    height: 56px;
+    right: -78px;
+    top: calc(50% - 28px);
+    background-image: url(../img/right.svg);
+    z-index: 5;
+  }
+}

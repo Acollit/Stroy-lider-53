@@ -1,0 +1,164 @@
+.leave {
+  position: relative;
+  padding: 60px 0;
+  margin-bottom: 160px;
+  background: var(--secondary-3o);
+  border-radius: 50px;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 198px;
+    height: 234px;
+    left: 0;
+    bottom: 0;
+    background-image: url(../img/leave-bg-3.webp);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height:168px;
+    right: 0;
+    top: 0;
+    background-image: url(../img/leave-bg-4.webp);
+  }
+
+
+  &__title {
+    margin-bottom: 24px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 78px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--gray---7o);
+  }
+
+  &__content {
+    max-width: 1278px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__item {
+    max-width: 649px;
+    width: 100%;
+    height: 270px;
+    padding: 24px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:nth-child(1) {
+      background-image: url(../img/leave-bg-1.webp);
+    }
+
+    &:nth-child(2) {
+      max-width: 589px;
+      background-image: url(../img/leave-bg-2.webp);
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    color: var(--gray---9o);
+  }
+
+  &__form {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__btn {
+    max-width: 217px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--white);
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    border: 1px solid var(--gray---4o);
+    border-radius: 8px;
+    padding: 16px 32px 16px 60px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--gray---5o);
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 32px;
+      top: 12px;
+      width: 25px;
+      height: 24px;
+      background-image: url("../img/screp.svg");
+
+
+
+    }
+
+
+  }
+
+  &__btn-two {
+    padding: 16px 10px;
+    max-width: 158px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--primary---6o);
+    background: var(--primary---1o);
+  }
+
+  &__wat {
+    display: flex;
+    max-width: 158px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    border-radius: 8px;
+    padding: 16px;
+    background: var(--secondary-6o);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    color: var(--white);
+  }
+
+}
