@@ -1,0 +1,182 @@
+.graph-modal {
+  &__container {
+    max-width: 1065px;
+    width: 100%;
+    padding: 0;
+    border-radius: 24px;
+  }
+
+  &__close {
+    width: 28px;
+    height: 28px;
+    background-image: url(../img/close.svg);
+    right: 24px;
+    top: 24px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__inner {
+    padding: 24px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 120%;
+    text-align: center;
+    color: #000;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--gray---7o);
+  }
+
+  &__form {
+    max-width: 456px;
+    width: 100%;
+  }
+
+  &__item {
+    margin: 0;
+    padding-left: 26px;
+    margin-bottom: 12px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--gray---7o);
+    position: relative;
+
+    &:nth-child(3) {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 19px;
+        height: 19px;
+        left: 0;
+        top: 0;
+        background-image: url(../img/map.svg);
+        background-size: cover;
+      }
+    }
+
+    &:nth-child(4) {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 19px;
+        height: 19px;
+        left: 0;
+        top: 0;
+        background-image: url(../img/time.svg);
+        background-size: cover;
+      }
+    }
+  }
+
+  &__input {
+    max-width: 456px;
+    width: 100%;
+    border: 1px solid var(--gray---6o);
+    border-radius: 12px;
+    padding: 20px 24px 20px 52px;
+    background: var(--white);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--gray---7o);
+  }
+
+  &__message {
+    max-width: 456px;
+    width: 100%;
+    border: 1px solid var(--gray---6o);
+    border-radius: 12px;
+    padding: 20px 24px 20px 24px;
+    margin-bottom: 20px;
+    background: var(--white);
+    resize: none;
+    height: 145px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--gray---7o);
+  }
+
+  &__name {
+    margin-bottom: 20px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 19px;
+      left: 24px;
+      top: 20px;
+      background-image: url(../img/name.svg);
+    }
+  }
+
+  &__phone {
+    margin-bottom: 45px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 19px;
+      left: 24px;
+      top: 20px;
+      background-image: url(../img/tel-2.svg);
+    }
+
+    &::after {
+      content: '*Поле обязательно для заполнения';
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      color: var(--error---40);
+    }
+  }
+
+  &__btn {
+    max-width: 456px;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  &__text {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--gray---7o);
+  }
+
+  &__link {
+    color: var(--primary-5o);
+  }
+}

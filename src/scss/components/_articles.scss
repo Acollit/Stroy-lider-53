@@ -1,0 +1,53 @@
+.articles {
+  margin-bottom: 60px;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  &__item {
+    position: relative;
+    border-radius: 24px;
+    background: var(--white);
+    height: 413px;
+    max-width: 361px;
+    width: 100%;
+
+  }
+
+  &__inner {
+    padding: 16px;
+  }
+
+  &__name {
+    margin: 0;
+    margin-bottom: 12px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+    color: #000;
+  }
+
+  &__text {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--gray---7o);
+  }
+
+  &__time {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--gray---5o);
+  }
+}

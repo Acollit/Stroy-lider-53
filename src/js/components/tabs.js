@@ -1,6 +1,10 @@
 import GraphTabs from 'graph-tabs';
-if (document.querySelector('.tabs')) {
+if (document.querySelector('.hit')) {
   const tabs = new GraphTabs('tab');
+
+}
+if (document.querySelector('.order')) {
+  const tabs = new GraphTabs('tabs-order');
 
 }
 

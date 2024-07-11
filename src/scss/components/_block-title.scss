@@ -1,0 +1,28 @@
+.block-title {
+
+  &__content {
+    margin-bottom: 24px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--blog {
+      background-image: url(../img/block-title-1.webp);
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 161%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: var(--white);
+  }
+
+
+}
