@@ -1,0 +1,140 @@
+.packages {
+
+  margin-bottom: 120px;
+
+  &__content {
+    border-radius: 16px;
+    padding: 24px;
+    background: var(--white);
+  }
+
+  &__line {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px 24px;
+    border-radius: 16px;
+
+    &:nth-child(1) {
+      background: var(--primary---8o);
+      margin-bottom: 20px;
+
+      .packages__text {
+        color: #FFF;
+      }
+    }
+
+
+
+    &:nth-child(4) {
+      .packages__col {
+        &:last-child {
+          grid-column: 3 span;
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      .packages__col {
+        &:last-child {
+          grid-column: 3 span;
+        }
+      }
+    }
+
+    &--blue {
+      background: var(--gray-04);
+    }
+
+    &--accent {
+      margin-top: 20px;
+      background: var(--primary-3o);
+
+      .packages__subtitle {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:nth-child(1) {
+      justify-content: flex-start;
+
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--white);
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--gray---9o);
+  }
+
+  &__text {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #000;
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tabs {
+
+    &__nav {
+      display: flex;
+      margin-bottom: 36px;
+      gap: 10px;
+    }
+
+    &__nav-btn {
+      padding: 11px 16px 11px 16px;
+      border-radius: 8px;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 120%;
+      color: var(--gray---7o);
+      transition: all .3s ease-in-out;
+
+      &--active {
+        background: var(--primary-5o);
+        color: #FFF;
+      }
+
+      &:hover {
+        color: var(--white);
+        background: var(--primary-5o);
+      }
+
+      &:active {
+        color: var(--white);
+        background: var(--primary-5o);
+      }
+
+      &:focus {
+        color: var(--white);
+        background: var(--primary-5o);
+      }
+    }
+  }
+}

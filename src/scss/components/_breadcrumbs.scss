@@ -7,6 +7,41 @@
     gap: 35px;
   }
 
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 60px;
+  }
+
+  &__prev {
+    border-radius: 8px;
+    padding: 16px 28px 18px 28px;
+    background: var(--primary---2o);
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--warning---7o);
+  }
+
+  &__next {
+    border-radius: 8px;
+    padding: 16px 28px 18px 28px;
+    background: var(--primary---2o);
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--warning---7o);
+  }
+
   &__link {
     font-family: var(--font-family);
     font-weight: 400;

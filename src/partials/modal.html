@@ -37,4 +37,215 @@
       <img loading="lazy" src="img/modal.webp" class="image" width="561" height="696" alt="imf">
     </div>
   </div>
+  <div class="graph-modal__container graph-modal__container--two" role="dialog" aria-modal="true"
+    data-graph-target="modal2">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="modal">
+      <div class="modal__inner">
+        <p class="modal__title">
+          Быстрый расчёт стоимости
+        </p>
+        <p class="modal__subtitle">
+          Есть вопросы по строительству дома?
+        </p>
+        <p class="modal__descr">
+          За 20 секунд подберите объект по параметрам
+        </p>
+
+        <form action="#" class="modal__form">
+          <div class="modal__grid">
+            <div class="modal__item">
+              <p class="modal__item-title">
+                Тип постройки
+              </p>
+              <div class="modal__box">
+                <input type="radio" name="Тип постройки" value="Каркасный дом" class="input-reset modal__radio">
+                <label class="modal__label">Каркасный дом</label>
+              </div>
+              <div class="modal__box">
+                <input type="radio" name="Тип постройки" value="Дом из бруса под усадку"
+                  class="input-reset modal__radio">
+                <label class="modal__label">Дом из бруса под усадку</label>
+              </div>
+              <div class="modal__box">
+                <input type="radio" name="Тип постройки" value="Баня из бруса" class="input-reset modal__radio">
+                <label class="modal__label">Баня из бруса</label>
+              </div>
+            </div>
+            <div class="modal__item">
+              <p class="modal__item-title">
+                Комплектация
+              </p>
+              <div class="modal__box">
+                <input type="radio" name="Комплектация" value="Каркас холодный контур" class="input-reset modal__radio">
+                <label class="modal__label">Каркас холодный контур</label>
+              </div>
+              <div class="modal__box">
+                <input type="radio" name="Комплектация" value="Каркас с отделкой" class="input-reset modal__radio">
+                <label class="modal__label">Каркас с отделкойу</label>
+              </div>
+              <div class="modal__box">
+                <input type="radio" name="Комплектация" value="Каркас под ключ" class="input-reset modal__radio">
+                <label class="modal__label">Каркас под ключ</label>
+              </div>
+              <div class="modal__box">
+                <input type="radio" name="Комплектация" value="Брус 140х140" class="input-reset modal__radio">
+                <label class="modal__label">Брус 140х140</label>
+              </div>
+              <div class="modal__box">
+                <input type="radio" name="Комплектация" value="Брус 140х190" class="input-reset modal__radio">
+                <label class="modal__label">Брус 140х190</label>
+              </div>
+            </div>
+            <div class="modal__item">
+              <p class="modal__item-title">
+                Нужна ли обвязка свай?
+              </p>
+              <div class="modal__box">
+                <input type="radio" name="Нужна ли обвязка свай?" value="Да" class="input-reset modal__radio">
+                <label class="modal__label">Да</label>
+              </div>
+              <div class="modal__box">
+                <input type="radio" name="Нужна ли обвязка свай?" value="Нет" class="input-reset modal__radio">
+                <label class="modal__label">Нет</label>
+              </div>
+
+            </div>
+            <div class="modal__item">
+              <p class="modal__item-title">
+                Фундамент
+              </p>
+              <div class="modal__box">
+                <input type="radio" name="Фундамент" value="Опорно - столбчатый" class="input-reset modal__radio">
+                <label class="modal__label">Опорно - столбчатый</label>
+              </div>
+              <div class="modal__box">
+                <input type="radio" name="Фундамент" value="Свайно - винтовой" class="input-reset modal__radio">
+                <label class="modal__label">Свайно - винтовой</label>
+              </div>
+              <div class="modal__box">
+                <input type="radio" name="Фундамент" value="Есть свой" class="input-reset modal__radio">
+                <label class="modal__label">Есть свой</label>
+              </div>
+
+            </div>
+            <div class="modal__wrapper">
+              <div class="modal__item">
+                <p class="modal__item-title">
+                  Наличие электричества
+                </p>
+                <div class="modal__block">
+                  <div class="modal__box">
+                    <input type="radio" name="Наличие электричества" value="Да" class="input-reset modal__radio">
+                    <label class="modal__label">Да</label>
+                  </div>
+                  <div class="modal__box">
+                    <input type="radio" name="Наличие электричества" value="Нет" class="input-reset modal__radio">
+                    <label class="modal__label">Нет</label>
+                  </div>
+                </div>
+
+              </div>
+              <div class="modal__item">
+                <p class="modal__item-title">
+                  Подъедит ли КАМАЗ
+                </p>
+                <div class="modal__block">
+                  <div class="modal__box">
+                    <input type="radio" name="Подъедит ли КАМАЗ" value="Да" class="input-reset modal__radio">
+                    <label class="modal__label">Да</label>
+                  </div>
+                  <div class="modal__box">
+                    <input type="radio" name="Подъедит ли КАМАЗ" value="Нет" class="input-reset modal__radio">
+                    <label class="modal__label">Нет</label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="modal__item">
+              <p class="modal__item-title">
+                Кровля
+              </p>
+              <div class="modal__box">
+                <input type="radio" name="Кровля" value="Покрытие — металлочерепица, сталь 0,45 мм"
+                  class="input-reset modal__radio">
+                <label class="modal__label">Покрытие — металлочерепица, сталь 0,45 мм</label>
+              </div>
+              <div class="modal__box">
+                <input type="radio" name="Кровля" value="Обрешетка — сухая остроганная доска 20×95 мм"
+                  class="input-reset modal__radio">
+                <label class="modal__label">Обрешетка — сухая остроганная доска 20×95 мм</label>
+              </div>
+              <div class="modal__box">
+                <input type="radio" name="Кровля"
+                  value="Контробрешетка — вентиляционный зазор — строганный брусок 40×50 мм"
+                  class="input-reset modal__radio">
+                <label class="modal__label">Контробрешетка — вентиляционный зазор — строганный брусок 40×50 мм</label>
+              </div>
+              <div class="modal__box">
+                <input type="radio" name="Кровля" value="Подкровельная антиконденсатная пленка Изоспан «АМ»"
+                  class="input-reset modal__radio">
+                <label class="modal__label">Подкровельная антиконденсатная пленка Изоспан «АМ»</label>
+              </div>
+
+            </div>
+            <div class="modal__item">
+              <p class="modal__item-title">
+                Цвет кровли
+              </p>
+              <div class="modal__box">
+                <input type="radio" name="Цвет кровли" value="Зеленый" class="input-reset modal__radio">
+                <label class="modal__label">Зеленый</label>
+              </div>
+              <div class="modal__box">
+                <input type="radio" name="Цвет кровли" value="Коричневый" class="input-reset modal__radio">
+                <label class="modal__label">Коричневый</label>
+              </div>
+              <div class="modal__box">
+                <input type="radio" name="Цвет кровли" value="Красный" class="input-reset modal__radio">
+                <label class="modal__label">Красный</label>
+              </div>
+
+
+            </div>
+          </div>
+          <div class="modal__bot">
+            <div class="modal__name">
+              <input type="text" name="Имя" class="input-reset modal__input" placeholder="Ваше имя">
+            </div>
+            <div class="modal__mail">
+              <input type="email" name="Электронная почта" class="input-reset modal__input" placeholder="Электронная почта">
+            </div>
+
+            <div class="modal__phone">
+              <input type="tel" name="Телефон" class="input-reset modal__input" placeholder="Ваш телефон*">
+            </div>
+            <input type="text" name="Адрес объекта строительства" class="input-reset modal__input" placeholder="Адрес объекта строительства">
+            <input type="text" name="Ссылка на проект на другом сайте" class="input-reset modal__input" placeholder="Ссылка на проект на другом сайте">
+
+            <div class="modal__bot-wrapper">
+              <textarea name="Cообщение" class="input-reset modal__message" placeholder="Ваше сообщение"></textarea>
+              <div class="modal__bot-inner">
+                <label class="modal__files">
+                  <input type="file" name="file" class="input-reset modal__file">
+                  Загрузить файлы
+                </label>
+                <button class="btn-reset btn modal__btn">Отправить заявку</button>
+                <p class="modal__text">
+                  *Передавая информацию сайту, Вы принимаете условия <a href="#" class="modal__link">политики защиты
+                    персональной информации</a>
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+
+
+    </div>
+  </div>
 </div>

@@ -1,0 +1,34 @@
+.gallery {
+
+  margin-bottom: 60px;
+
+
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: var(--gray---8o);
+  }
+
+  &__swiper {
+    max-height: 362px;
+
+    .swiper-slide {
+      max-width: 491px !important;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+
+.lg-backdrop {
+  opacity: .6 !important;
+}

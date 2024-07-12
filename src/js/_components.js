@@ -4,3 +4,6 @@ import './components/quiz.js';
 import './components/acardion.js';
 import './components/credit.js';
 import './components/modal.js';
+import './components/slider.js';
+import './components/map.js';
+import './components/gallary.js';

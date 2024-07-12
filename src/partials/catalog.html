@@ -1,17 +1,99 @@
 <div class="catalog">
   <div class="container">
-    <div class="catalog__tab">
-      <button class="btn-reset catalog__tab-btn">Показать все</button>
-      <button class="btn-reset catalog__tab-btn">Одноэтажные</button>
-      <button class="btn-reset catalog__tab-btn">С мансардой</button>
-      <button class="btn-reset catalog__tab-btn">Двухэтажные</button>
-    </div>
     <div class="catalog__content">
       <div class="catalog__aside">
-
+        <div class="catalog__box">
+          <p class="catalog__subtitle">
+            Цена, руб
+          </p>
+          <div class="catalog__aside-inner">
+            <cpan class="catalog__aside-price">500 000</cpan>
+            <cpan class="catalog__aside-price">50 000 000</cpan>
+          </div>
+          <div class="catalog__slider" id="price-slider"></div>
+        </div>
+        <div class="catalog__box">
+          <p class="catalog__subtitle">
+            Общая площадь, кв.м
+          </p>
+          <div class="catalog__aside-inner">
+            <cpan class="catalog__aside-price">15</cpan>
+            <cpan class="catalog__aside-price">300</cpan>
+          </div>
+          <div class="catalog__slider" id="size-slider"></div>
+        </div>
+        <div class="catalog__box">
+          <p class="catalog__subtitle">
+            Этажность
+          </p>
+          <div class="catalog__radios">
+            <input type="radio" name="Floor" value="1" class="input-reset catalog__radio">
+            <label class="catalog__label">Одноэтажные</label>
+          </div>
+          <div class="catalog__radios">
+            <input type="radio" name="Floor" value="1.m" class="input-reset catalog__radio">
+            <label class="catalog__label">С мансардой</label>
+          </div>
+          <div class="catalog__radios">
+            <input type="radio" name="Floor" value="2" class="input-reset catalog__radio">
+            <label class="catalog__label">Двухэтажные</label>
+          </div>
+        </div>
+        <div class="catalog__box">
+          <p class="catalog__subtitle">
+            Спален
+          </p>
+          <div class="catalog__radios">
+            <input type="radio" name="room" value="1" class="input-reset catalog__radio">
+            <label class="catalog__label">1</label>
+          </div>
+          <div class="catalog__radios">
+            <input type="radio" name="room" value="2" class="input-reset catalog__radio">
+            <label class="catalog__label">2</label>
+          </div>
+          <div class="catalog__radios">
+            <input type="radio" name="room" value="3" class="input-reset catalog__radio">
+            <label class="catalog__label">3</label>
+          </div>
+          <div class="catalog__radios">
+            <input type="radio" name="room" value="4" class="input-reset catalog__radio">
+            <label class="catalog__label">4</label>
+          </div>
+          <div class="catalog__radios">
+            <input type="radio" name="room" value="5" class="input-reset catalog__radio">
+            <label class="catalog__label">5 и более</label>
+          </div>
+        </div>
+        <div class="catalog__box">
+          <p class="catalog__subtitle">
+            Комплектация
+          </p>
+          <div class="catalog__radios">
+            <input type="radio" name="complect" value="fund" class="input-reset catalog__radio">
+            <label class="catalog__label">С фундаментом</label>
+          </div>
+          <div class="catalog__radios">
+            <input type="radio" name="complect" value="otdel" class="input-reset catalog__radio">
+            <label class="catalog__label">С коммуникациями и отделкой</label>
+          </div>
+          <div class="catalog__radios">
+            <input type="radio" name="complect" value="ready" class="input-reset catalog__radio">
+            <label class="catalog__label">Готовый</label>
+          </div>
+          <div class="catalog__radios">
+            <input type="radio" name="complect" value="ysad" class="input-reset catalog__radio">
+            <label class="catalog__label">Под усадку</label>
+          </div>
+          <div class="catalog__radios">
+            <input type="radio" name="complect" value="box" class="input-reset catalog__radio">
+            <label class="catalog__label">Коробка</label>
+          </div>
+        </div>
+        <button class="btn-reset btn catalog__btn">Найти проекты</button>
+        <button class="btn-reset catalog__clear">Сбросить фильтры</button>
       </div>
       <div class="catalog__grid">
-        <div class="catalog__item">
+        <div class="catalog__item" data-price="3000000" data-size="70" data-floor="1" data-room="3" data-complect="fund" >
           <span class="catalog__subspecial">
             Спецпредложение
           </span>
@@ -42,7 +124,7 @@
             </ul>
           </div>
         </div>
-        <div class="catalog__item">
+        <div class="catalog__item" data-price="3000000" data-size="70" data-floor="1" data-room="3" data-complect="fund">
           <span class="catalog__subspecial">
             Спецпредложение
           </span>
@@ -73,7 +155,7 @@
             </ul>
           </div>
         </div>
-        <div class="catalog__item">
+        <div class="catalog__item" data-price="3000000" data-size="70" data-floor="1" data-room="3" data-complect="fund">
           <span class="catalog__subspecial">
             Спецпредложение
           </span>

@@ -4,8 +4,9 @@ import Isotope from 'isotope-layout';
 // Получаем элементы слайдеров и селекторов
 var priceSlider = document.querySelector('#price-slider');
 var sizeSlider = document.querySelector('#size-slider');
-var sizeSelect = document.querySelector('#size2'); // Новый селектор
 var floorSelect = document.querySelector('#floor'); // Селектор для фильтрации по этажности
+var roomSelect = document.querySelector('input[name="room"]:checked'); // Радио-кнопки для фильтрации по количеству спален
+var complectSelect = document.querySelector('input[name="complect"]:checked'); // Радио-кнопки для фильтрации по комплектности
 
 if (priceSlider) {
   // Инициализация слайдера для цены с одной ручкой
@@ -17,9 +18,8 @@ if (priceSlider) {
       {
         to: function (value) {
           value = Math.round(value);
-          return value
-        },
-
+          return value;
+        }
       }
     ],
     range: {
@@ -39,8 +39,6 @@ if (sizeSlider) {
       {
         to: function (value) {
           value = Math.round(value);
-        },
-        from: function (value) {
           return value;
         }
       }
@@ -64,35 +62,36 @@ if (grid) {
     getSortData: {
       price: (itemElem) => parseInt(itemElem.getAttribute('data-price'), 10),
       size: (itemElem) => parseInt(itemElem.getAttribute('data-size'), 10),
-      dimensions: (itemElem) => itemElem.getAttribute('data-dimensions')
     }
   });
 
-  const applyFilters = () => {
+  const getSelectedRadioValue = (name) => {
+    const selectedRadio = document.querySelector(`input[name="${name}"]:checked`);
+    return selectedRadio ? selectedRadio.value : null;
+  };
 
+  const applyFilters = () => {
     if (priceSlider && sizeSlider) {
       const minPrice = Number(priceSlider.noUiSlider.get());
       const minSize = Number(sizeSlider.noUiSlider.get());
-      const selectedHouseType = document.querySelector('input[name="houseType"]:checked')?.value || 'Выбрать'; // Значение радио кнопки этажности
-      const isAcerChecked = document.querySelector('input[name="acer"]:checked') !== null;
-      const selectedSize = sizeSelect.value; // Значение селектора размера
-      const selectedFloor = floorSelect.value; // Значение селектора этажности
+      const selectedFloor = getSelectedRadioValue('Floor');
+      const selectedRoom = getSelectedRadioValue('room');
+      const selectedComplect = getSelectedRadioValue('complect');
 
       let filterFn = (itemElem) => {
         const itemPrice = parseInt(itemElem.getAttribute('data-price'), 10);
         const itemSize = parseInt(itemElem.getAttribute('data-size'), 10);
-        const itemHouseType = itemElem.getAttribute('data-house-type');
-        const itemHasAcer = itemElem.getAttribute('data-acer') === 'on';
-        const itemDimensions = itemElem.getAttribute('data-dimensions');
+        const itemFloor = itemElem.getAttribute('data-floor');
+        const itemRoom = itemElem.getAttribute('data-room');
+        const itemComplect = itemElem.getAttribute('data-complect');
 
         const matchesPrice = itemPrice >= minPrice;
         const matchesSize = itemSize >= minSize;
-        const matchesHouseType = selectedHouseType === 'Выбрать' || itemHouseType === selectedHouseType;
-        const matchesAcer = !isAcerChecked || itemHasAcer;
-        const matchesDimensions = selectedSize === 'Выбрать' || itemDimensions === selectedSize;
-        const matchesFloor = selectedFloor === 'Выбрать' || itemHouseType === selectedFloor;
+        const matchesFloor = !selectedFloor || itemFloor === selectedFloor;
+        const matchesRoom = !selectedRoom || itemRoom === selectedRoom;
+        const matchesComplect = !selectedComplect || itemComplect === selectedComplect;
 
-        return matchesPrice && matchesSize && matchesHouseType && matchesAcer && matchesDimensions && matchesFloor;
+        return matchesPrice && matchesSize && matchesFloor && matchesRoom && matchesComplect;
       };
 
       iso.arrange({
@@ -101,31 +100,31 @@ if (grid) {
     }
   };
 
-
   // Обработчики для обновления фильтра
-  if (priceSlider) {
-    priceSlider.noUiSlider.on('update', applyFilters);
-  }
+  const serch = document.querySelector('.catalog__btn')
+  serch.addEventListener('click', () => {
+    applyFilters();
 
-  if (sizeSlider) {
-    sizeSlider.noUiSlider.on('update', applyFilters);
-  }
+  })
 
   // Обработчики для радио-кнопок
+  const radioButtons = document.querySelectorAll('input[type="radio"]');
+  radioButtons.forEach(radio => {
+    radio.addEventListener('click', function (event) {
+      if (this.previousChecked) {
+        this.checked = false;
+        this.previousChecked = false;
+      } else {
+        this.previousChecked = true;
+      }
 
-  // Обработчик для нового селектора
-  if (sizeSelect) {
-    sizeSelect.addEventListener('change', applyFilters);
-  }
-
-  // Обработчик для селектора этажности
-  if (floorSelect) {
-    floorSelect.addEventListener('change', applyFilters);
-  }
-
+    });
+    // Initialize the previousChecked property
+    radio.previousChecked = radio.checked;
+  });
 
   // Добавляем обработчик для кнопки "Сбросить"
-  const resetButton = document.querySelector('.filter__clean');
+  const resetButton = document.querySelector('.catalog__clear');
   function reset() {
     // Сброс значений слайдеров
     if (priceSlider) {
@@ -135,33 +134,17 @@ if (grid) {
       sizeSlider.noUiSlider.set(15);
     }
 
-
-
-    // Сброс нового селектора
-    if (sizeSelect) {
-      sizeSelect.value = 'Выбрать';
-    }
-
-    // Сброс селектора этажности
-    if (floorSelect) {
-      floorSelect.value = 'Выбрать';
-    }
-
-    // Применить фильтры с новыми (сброшенными) значениями
-    applyFilters();
-  }
-  document.addEventListener('DOMContentLoaded', function () {
-    reset()
-  });
-
-  if (resetButton) {
-    resetButton.addEventListener('click', () => {
-      reset()
+    // Сброс радио-кнопок
+    const allRadioButtons = document.querySelectorAll('input[type="radio"]');
+    allRadioButtons.forEach(radio => {
+      radio.checked = false;
     });
   }
 
-  // Обработчики для отмены выбора радиокнопок
-
-
-
+  if (resetButton) {
+    resetButton.addEventListener('click', () => {
+      reset();
+      applyFilters();
+    });
+  }
 }
