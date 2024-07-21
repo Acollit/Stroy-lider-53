@@ -6,6 +6,12 @@
   border-radius: 50px;
   overflow: hidden;
 
+  @include tablet {
+    padding: 20px 0;
+    margin-bottom: 60px;
+    border-radius: 16px;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -14,16 +20,25 @@
     left: 0;
     bottom: 0;
     background-image: url(../img/leave-bg-3.webp);
+
+    @include tablet {
+      display: none;
+    }
+
   }
 
   &::after {
     content: '';
     position: absolute;
     width: 180px;
-    height:168px;
+    height: 168px;
     right: 0;
     top: 0;
     background-image: url(../img/leave-bg-4.webp);
+
+    @include tablet {
+      display: none;
+    }
   }
 
 
@@ -42,6 +57,13 @@
     line-height: 120%;
     text-align: center;
     color: var(--gray---7o);
+
+    @include tablet {
+      font-size: 18px;
+      line-height: 140%;
+      margin-bottom: 36px;
+      text-align: start;
+    }
   }
 
   &__content {
@@ -50,6 +72,10 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -62,13 +88,25 @@
     flex-direction: column;
     justify-content: space-between;
 
+    @include tablet {
+      padding: 16px;
+    }
+
     &:nth-child(1) {
       background-image: url(../img/leave-bg-1.webp);
+
+      @include tablet {
+        max-height: 210px;
+      }
     }
 
     &:nth-child(2) {
       max-width: 589px;
       background-image: url(../img/leave-bg-2.webp);
+
+      @include tablet {
+        max-height: 210px;
+      }
     }
   }
 
@@ -79,12 +117,20 @@
     font-size: 24px;
     line-height: 120%;
     color: var(--gray---9o);
+
+    @include tablet {
+      font-size: 16px;
+    }
   }
 
   &__form {
     display: flex;
     gap: 8px;
     align-items: center;
+
+    @include tablet {
+      flex-wrap: wrap-reverse;
+    }
   }
 
   &__input {
@@ -99,6 +145,8 @@
     line-height: 120%;
     text-align: center;
     color: var(--white);
+
+
   }
 
   &__link {
@@ -124,8 +172,16 @@
       height: 24px;
       background-image: url("../img/screp.svg");
 
+      @include tablet {
+        left: 15px;
+      }
 
+    }
 
+    @include tablet {
+      max-width: 136px;
+      padding: 16px 32px 16px 40px;
+      order: 2;
     }
 
 
@@ -141,6 +197,17 @@
     text-align: center;
     color: var(--primary---6o);
     background: var(--primary---1o);
+    transition: all .3s ease-in-out;
+
+    @include tablet {
+      max-width: 142px;
+
+    }
+
+    &:hover {
+      background-color: var(--primary-5o);
+      color: var(--white);
+    }
   }
 
   &__wat {
@@ -159,6 +226,17 @@
     line-height: 100%;
     text-align: center;
     color: var(--white);
+    transition: all .3s ease-in-out;
+
+    @include tablet {
+      max-width: 136px;
+
+    }
+    &:hover {
+      background: var(--secondary-5o);
+    }
+
+
   }
 
 }

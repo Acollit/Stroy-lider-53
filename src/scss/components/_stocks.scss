@@ -1,9 +1,14 @@
 .stocks {
   margin-bottom: 60px;
+
   &__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__item {
@@ -16,6 +21,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
   }
 
   &__name {
@@ -26,5 +37,9 @@
     line-height: 120%;
     letter-spacing: -0.02em;
     color: #000;
+
+    @include tablet {
+      font-size: 18px;
+    }
   }
 }

@@ -8,7 +8,9 @@
         <ul class="list-reset nav__list">
           <li class="nav__item ">
             <a href="#" class="nav__link  nav__link--accent">Проекты
-              <img loading="lazy" src="img/bot.svg" class="image" width="10" height="6" alt="bot">
+              <svg class="nav__svg">
+                <use xlink:href="img/sprite.svg#bot"></use>
+              </svg>
             </a>
             <div class="nav__sublist">
               <a href="#" class="nav__sublink">Каркасные дома</a>
@@ -42,6 +44,9 @@
         </a>
       </div>
       <button class="btn-reset btn header__btn" data-graph-path="modal2">Расчёт</button>
+      <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+      </button>
     </div>
   </div>
 </header>

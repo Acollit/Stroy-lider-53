@@ -13,6 +13,10 @@
     letter-spacing: -0.02em;
     text-align: center;
     color: #000;
+
+    @include tablet {
+      font-size: 18px;
+    }
   }
 
   &__text {
@@ -23,12 +27,22 @@
     font-size: 18px;
     line-height: 120%;
     color: #000;
+
+    @include tablet {
+      font-size: 14px;
+    }
   }
 
   &__list {
     display: flex;
     justify-content: space-between;
     margin-bottom: 72px;
+
+    @include tablet {
+      flex-direction: column;
+      margin-bottom: 30px;
+      gap: 12px;
+    }
   }
 
   &__item {
@@ -42,6 +56,14 @@
       margin: 0;
       margin-top: 16px;
     }
+
+    .image {
+      @include tablet {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+      }
+    }
   }
 
   &__count {
@@ -51,5 +73,11 @@
     font-size: 56px;
     letter-spacing: -0.02em;
     color: var(--primary-5o);
+
+    @include tablet {
+      font-size: 24px;
+      line-height: 130%;
+      text-align: center;
+    }
   }
 }

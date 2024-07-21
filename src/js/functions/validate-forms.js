@@ -66,7 +66,7 @@ export const validateForms = (selector, rules, checkboxes = [], afterSend) => {
       }
     }
 
-    xhr.open('POST', 'mail.php', true);
+    xhr.open('POST', 'http://acollit.beget.tech/wp-content/themes/53/assets/mail.php', true);
     xhr.send(formData);
 
     ev.target.reset();

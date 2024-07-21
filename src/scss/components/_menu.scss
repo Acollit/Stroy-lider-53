@@ -1,0 +1,92 @@
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  border-radius: 0 16px 16px 0;
+  box-shadow: 4px 0 25px 0 rgba(165, 165, 165, 0.25);
+  background: var(--white);
+  z-index: 20;
+  transform: translateX(-280px);
+  transition: all .3s ease-in-out;
+  overflow: scroll;
+
+  &--active {
+    transform: translateX(0px);
+  }
+
+  &__content {
+    padding: 12px 20px;
+
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--gray---6o);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      color: var(--secondary-7o);
+    }
+  }
+
+  &__phone {
+    display: block;
+    margin-bottom: 13px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--gray---7o);
+  }
+
+  &__mail {
+    display: block;
+    margin-bottom: 13px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--gray---7o);
+  }
+
+  &__address {
+    margin: 0;
+    margin-bottom: 12px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--gray---7o);
+  }
+
+
+  &__text {
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--gray---7o);
+  }
+}

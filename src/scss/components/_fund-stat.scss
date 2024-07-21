@@ -1,0 +1,176 @@
+.fund-stat {
+  margin-bottom: 100px;
+
+  @include tablet {
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: #000;
+
+    @include tablet {
+      font-size: 24px;
+      line-height: 120%;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+
+    @include tablet {
+      flex-direction: column;
+      margin-bottom: 60px;
+      gap: 20px;
+    }
+  }
+
+  &__content {
+    max-width: 619px;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 24px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: var(--gray---8o);
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 120%;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    margin-top: 8px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--gray---9o);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 12px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 298px;
+    border-radius: 16px;
+    padding: 16px;
+    background: var(--white-50);
+
+    @include tablet {
+      max-width: 450px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 12px;
+    }
+  }
+
+
+  &__box {
+    position: relative;
+    padding-left: 79px;
+    max-width: 491px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 37px;
+      height: 31px;
+      top: 0;
+      left: 0;
+      background-image: url(../img/order-check.png);
+      background-size: cover;
+
+      @include tablet {
+        width: 20px;
+        height: 16px;
+      }
+    }
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 120%;
+      padding-left: 28px;
+    }
+
+
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 8px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--gray---8o);
+
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+
+  &__box-text {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: var(--gray---8o);
+
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+
+  &__btn {
+    margin: 0 auto;
+
+    @include tablet{
+      margin: 0;
+      font-size: 16px;
+      max-width: 450px;
+    }
+  }
+
+
+}

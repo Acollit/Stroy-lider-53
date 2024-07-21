@@ -2,11 +2,21 @@
   padding: 60px 0;
   background: var(--white);
 
+  @include tablet {
+    padding: 20px 0;
+  }
+
   &__content {
     display: flex;
     position: relative;
     margin-bottom: 15px;
     align-items: flex-start;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 25px;
+      margin-bottom: 30px;
+    }
   }
 
   &__box {
@@ -17,6 +27,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 90px;
+
+    @include small-tablet {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
+    }
 
   }
 
@@ -59,9 +74,14 @@
     font-size: 16px;
     line-height: 120%;
     color: var(--gray---7o);
+    transition: all .3s ease-in-out;
 
     &:not(:last-child) {
       margin-bottom: 6px;
+    }
+
+    &:hover {
+      color: var(--secondary-7o);
     }
   }
 
@@ -142,6 +162,10 @@
   &__btns {
     display: flex;
     gap: 16px;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &__socials {
@@ -149,9 +173,18 @@
     gap: 10px;
   }
 
+  &__social {
+    opacity: 1;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+
   &__btn {
     display: block;
-    max-width: 179px;
+    max-width: 200px;
     width: 100%;
     border-radius: 8px;
     padding: 9px 16px 9px 16px;
@@ -162,6 +195,15 @@
     line-height: 120%;
     text-align: center;
     color: var(--primary-5o);
+    transition: all .3s ease-in-out;
+
+    @include tablet {
+      max-width: 200px;
+    }
+
+    &:hover {
+      background: var(--primary---1o);
+    }
   }
 
   &__text {

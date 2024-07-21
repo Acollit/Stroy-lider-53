@@ -4,9 +4,15 @@
   border-radius: 50px;
   background: var(--secondary-3o);
 
+  @include tablet {
+    padding: 20px 0;
+    border-radius: 16px;
+    margin-bottom: 60px;
+  }
+
   &__title {
     margin: 0;
-    margin-bottom: 24PX;
+    margin-bottom: 24px;
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 48px;
@@ -17,6 +23,11 @@
 
     &--accent {
       color: var(--primary-5o);
+    }
+
+    @include tablet {
+      font-size: 16px;
+      margin-bottom: 16px;
     }
   }
 
@@ -29,6 +40,10 @@
     &--dis {
       display: none;
     }
+
+    @include tablet {
+      gap: 20px;
+    }
   }
 
   &__descr {
@@ -37,6 +52,10 @@
     font-size: 18px;
     line-height: 120%;
     color: var(--gray---8o);
+
+    @include tablet {
+      font-size: 12px;
+    }
   }
 
   &__count {
@@ -110,12 +129,26 @@
       }
 
     }
+
+    .quiz__next {}
+
   }
 
 
   &__wrapper {
     display: flex;
     gap: 40px;
+
+    @include tablet {
+      overflow-x: scroll;
+      gap: 12px;
+    }
+
+    .quiz__box {
+      @include tablet {
+        min-width: 200px;
+      }
+    }
 
   }
 
@@ -129,11 +162,12 @@
   &__inner {
     display: flex;
     gap: 12px;
+    align-items: center;
   }
 
   &__radio {
-    width: 16px;
-    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
     border-radius: 50%;
     border: 1px solid #828282;
     background-color: inherit;
@@ -173,6 +207,10 @@
     margin-bottom: 60px;
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
   }
 
   &__next {
@@ -186,6 +224,10 @@
     line-height: 140%;
     text-align: center;
     color: var(--white);
+
+    @include tablet {
+      max-width: 154px;
+    }
   }
 
   &__prev {
@@ -197,6 +239,10 @@
     text-align: center;
     color: var(--warning---7o);
     background: var(--primary---2o);
+
+    @include tablet {
+      max-width: 154px;
+    }
   }
 
   &__name {
@@ -207,6 +253,10 @@
     font-size: 28px;
     line-height: 120%;
     color: var(--gray---8o);
+
+    @include tablet {
+      font-size: 16px;
+    }
   }
 
   &__input {

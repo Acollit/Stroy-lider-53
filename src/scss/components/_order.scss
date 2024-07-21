@@ -1,6 +1,10 @@
 .order {
   margin-bottom: 60px;
 
+  @include tablet {
+    display: none;
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 40px;

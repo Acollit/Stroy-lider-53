@@ -1,6 +1,10 @@
 .section-stocks {
   margin-bottom: 100px;
 
+  @include tablet {
+    margin-bottom: 60px;
+  }
+
   &__wrapper {
     position: relative;
   }
@@ -25,5 +29,12 @@
     z-index: 5;
   }
 
-  &__swiper {}
+  &__swiper {
+    .image {
+      border-radius: 24px;
+      @include tablet {
+        height: 280px;
+      }
+    }
+  }
 }

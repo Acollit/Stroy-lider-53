@@ -2,9 +2,35 @@
 
   margin-bottom: 160px;
 
+  @include tablet {
+    margin-bottom: 60px;
+  }
+
   &__content {
     display: flex;
     gap: 24px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+  }
+
+  &__banner {
+    height: 100%;
+    width: 100%;
+    height: 824px;
+    max-width: 600px;
+    background-image: url(../img/section-projects-baner.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include tablet {
+      height: 340px;
+      background-image: url(../img/section-projects-baner-mb.webp);
+      order: 4;
+      border-radius: 24px;
+    }
   }
 
   &__inner {
@@ -48,6 +74,13 @@
     border-radius: 16px;
     box-shadow: 0 2px 20px -2px rgba(16, 24, 40, 0.06), 0 5px 12px -2px rgba(16, 24, 40, 0.1);
     overflow: hidden;
+
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-height: 340px;
+    }
   }
 
 
@@ -84,5 +117,9 @@
     line-height: 120%;
     text-align: center;
     color: var(--white);
+
+    @include tablet {
+      font-size: 12px;
+    }
   }
 }

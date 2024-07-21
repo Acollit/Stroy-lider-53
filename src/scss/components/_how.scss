@@ -1,10 +1,31 @@
 .how {
 
   margin-bottom: 160px;
+
+  @include tablet {
+    margin-bottom: 60px;
+  }
+
+  &--two {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__item {
@@ -107,6 +128,7 @@
     line-height: 120%;
     text-align: center;
     color: var(--white);
+    padding: 15px 0;
   }
 
   &__subtitle {

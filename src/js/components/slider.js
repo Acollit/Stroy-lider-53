@@ -11,7 +11,7 @@ var complectSelect = document.querySelector('input[name="complect"]:checked'); /
 if (priceSlider) {
   // Инициализация слайдера для цены с одной ручкой
   noUiSlider.create(priceSlider, {
-    start: 300000,
+    start: 500000,
     step: 1000,
     connect: 'lower',
     tooltips: [
@@ -23,7 +23,7 @@ if (priceSlider) {
       }
     ],
     range: {
-      'min': 300000,
+      'min': 500000,
       'max': 5000000
     }
   });
@@ -32,7 +32,7 @@ if (priceSlider) {
 if (sizeSlider) {
   // Инициализация слайдера для размера с одной ручкой
   noUiSlider.create(sizeSlider, {
-    start: 15,
+    start: 20,
     step: 5,
     connect: 'lower',
     tooltips: [
@@ -44,7 +44,7 @@ if (sizeSlider) {
       }
     ],
     range: {
-      'min': 15,
+      'min': 20,
       'max': 300
     }
   });
@@ -69,6 +69,7 @@ if (grid) {
     const selectedRadio = document.querySelector(`input[name="${name}"]:checked`);
     return selectedRadio ? selectedRadio.value : null;
   };
+
 
   const applyFilters = () => {
     if (priceSlider && sizeSlider) {
@@ -97,15 +98,21 @@ if (grid) {
       iso.arrange({
         filter: filterFn
       });
+
+
     }
   };
 
-  // Обработчики для обновления фильтра
-  const serch = document.querySelector('.catalog__btn')
-  serch.addEventListener('click', () => {
-    applyFilters();
 
-  })
+  applyFilters();
+
+  // Обработчики для обновления фильтра
+  const search = document.querySelector('.catalog__btn');
+  if (search) {
+    search.addEventListener('click', () => {
+      applyFilters();
+    });
+  }
 
   // Обработчики для радио-кнопок
   const radioButtons = document.querySelectorAll('input[type="radio"]');
@@ -117,7 +124,6 @@ if (grid) {
       } else {
         this.previousChecked = true;
       }
-
     });
     // Initialize the previousChecked property
     radio.previousChecked = radio.checked;
@@ -138,6 +144,7 @@ if (grid) {
     const allRadioButtons = document.querySelectorAll('input[type="radio"]');
     allRadioButtons.forEach(radio => {
       radio.checked = false;
+      radio.previousChecked = false;
     });
   }
 
@@ -147,4 +154,15 @@ if (grid) {
       applyFilters();
     });
   }
+
+  const catalogBtn = document.getElementById('catalogbtn')
+  const catalog = document.querySelector('.catalog__aside')
+  catalogBtn.addEventListener('click', () => {
+    if (catalog.classList.contains('catalog__aside--active')) {
+      catalog.classList.remove('catalog__aside--active')
+    } else {
+      catalog.classList.add('catalog__aside--active')
+    }
+  });
+
 }

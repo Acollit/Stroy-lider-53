@@ -4,6 +4,11 @@
   &__content {
     display: flex;
     gap: 24px;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 12px;
+    }
   }
 
   &__wrapper {
@@ -19,13 +24,31 @@
     margin-bottom: 20px;
 
     .image {
-      height: 477px;
+      height: 516px;
+      object-fit: contain;
+
+      @include tablet {
+        height: auto;
+      }
     }
   }
 
   &__thumbs {
     .swiper-slide {
       max-width: 108px;
+
+      @include tablet {
+        max-width: 80px;
+      }
+
+    }
+
+    .image {
+      height: 84px;
+
+      @include tablet {
+        height: 62px;
+      }
     }
 
 
@@ -39,13 +62,12 @@
     border-radius: 50px;
     padding: 6px 10px 6px 38px;
     background: var(--white);
-
-
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 16px;
     line-height: 120%;
     color: var(--secondary-5o);
+    z-index: 3;
 
     &::before {
       content: '';
@@ -63,6 +85,10 @@
     border-radius: 16px;
     padding: 24px 40px;
     background: var(--white);
+
+    @include tablet {
+      padding: 20px 10px;
+    }
   }
 
   &__name {
@@ -74,6 +100,12 @@
     line-height: 120%;
     letter-spacing: -0.02em;
     color: var(--gray-10o);
+
+    @include tablet {
+      font-size: 24px;
+      line-height: 120%;
+      margin-bottom: 12px;
+    }
   }
 
   &__list {
@@ -82,6 +114,10 @@
     gap: 8px;
     max-width: 650px;
     margin-bottom: 112px;
+
+    @include tablet {
+      margin-bottom: 12px;
+    }
   }
 
   &__item {
@@ -116,12 +152,20 @@
 
         background-image: url(../img/size.svg);
       }
+
+      @include tablet {
+        order: 4;
+      }
     }
 
     &:nth-child(3) {
       &::before {
 
         background-image: url(../img/floor.svg);
+      }
+
+      @include tablet {
+        order: 2;
       }
     }
 
@@ -153,6 +197,13 @@
     line-height: 120%;
     letter-spacing: -0.02em;
     color: var(--primary-5o);
+
+    @include tablet {
+      font-size: 18px;
+      line-height: 140%;
+      text-align: left;
+    }
+
   }
 
   &__prices {
@@ -160,6 +211,13 @@
     align-items: center;
     gap: 16px;
     margin-bottom: 26px;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 0px;
+      align-items: center;
+    }
   }
 
   &__sale {
@@ -170,6 +228,25 @@
     line-height: 120%;
     text-decoration: line-through;
     color: var(--gray---7o);
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 120%;
+      text-align: left;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
   }
 
   &__mortgage {
@@ -182,6 +259,11 @@
     background-image: url(../img/mortgage.svg);
     background-position: right bottom;
     background-repeat: no-repeat;
+
+    @include tablet {
+      max-width: 187px;
+      margin-bottom: 0px;
+    }
   }
 
   &__descr {
@@ -204,10 +286,19 @@
   &__btns {
     display: flex;
     gap: 24px;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 12px;
+    }
   }
 
   &__btn {
     max-width: 258px;
+
+    @include tablet {
+      max-width: 400px;
+    }
   }
 
   &__link {
@@ -223,5 +314,9 @@
     line-height: 140%;
     text-align: center;
     color: var(--warning---7o);
+
+    @include tablet {
+      max-width: 400px;
+    }
   }
 }

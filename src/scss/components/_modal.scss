@@ -9,6 +9,15 @@
       padding: 20px 60px !important;
       border-radius: 60px !important;
       max-width: 1240px !important;
+
+      @include tablet {
+        padding: 20px 15px !important;
+        border-radius: 20px !important;
+      }
+    }
+
+    &--mini {
+      max-width: 430px !important;
     }
   }
 
@@ -23,10 +32,25 @@
   &__content {
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      padding: 40px 0;
+    }
+
+
+    .image {
+      @include tablet {
+        display: none;
+      }
+    }
   }
 
   &__inner {
     padding: 24px;
+
+    @include tablet {
+      padding: 18px;
+    }
   }
 
   &__title {
@@ -38,6 +62,14 @@
     line-height: 120%;
     text-align: center;
     color: #000;
+
+    @include tablet {
+      margin-bottom: 24px;
+      font-family: var(--third-family);
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 130%;
+    }
   }
 
   &__descr {
@@ -49,6 +81,12 @@
     line-height: 120%;
     text-align: center;
     color: var(--gray---7o);
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 120%;
+      text-align: left;
+    }
   }
 
   &__form {
@@ -217,12 +255,42 @@
 
 .modal {
 
+  &__container {}
+
+  &__inner {
+    &--mini {
+      padding: 40px;
+    }
+
+
+
+    @include tablet {
+      padding: 40px 0;
+    }
+  }
+
+  &__svg {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+  }
+
+
+
+
+
   &__close {
     width: 28px !important;
     height: 28px !important;
     background-image: url(../img/close.svg) !important;
     right: 24px !important;
     top: 24px !important;
+
+    @include tablet {
+      right: 15px !important;
+      top: 15px !important;
+    }
   }
 
   &__title {
@@ -235,6 +303,12 @@
     line-height: 161%;
     letter-spacing: -0.02em;
     color: var(--gray-10o);
+
+    @include tablet {
+      font-size: 24px;
+      line-height: 130%;
+      text-align: left;
+    }
   }
 
   &__subtitle {
@@ -246,6 +320,17 @@
     font-size: 36px;
     line-height: 120%;
     color: var(--gray---9o);
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 120%;
+      text-align: left;
+    }
+
+    &--two {
+      text-align: center;
+
+    }
   }
 
   &__descr {
@@ -257,13 +342,35 @@
     font-size: 18px;
     line-height: 120%;
     color: var(--gray---7o);
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 120%;
+      margin-bottom: 24px;
+    }
+
+    &--two {
+      margin: 0;
+      text-align: center;
+    }
   }
+
+
+
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     margin-bottom: 24px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__item {
@@ -273,6 +380,10 @@
 
     &:nth-child(6) {
       grid-column: 2 span;
+
+      @include tablet {
+        grid-column: 1 span;
+      }
     }
   }
 
@@ -378,12 +489,20 @@
     font-size: 14px;
     line-height: 120%;
     color: var(--gray---7o);
+
+    @include tablet {
+      margin: 0;
+    }
   }
 
   &__bot {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__file {
@@ -408,6 +527,10 @@
     background-image: url(../img/screp.svg);
     background-repeat: no-repeat;
     background-position: center left 75px;
+
+    @include tablet {
+      background-image: inherit;
+    }
   }
 
   &__btn {
@@ -419,6 +542,11 @@
     grid-column: 3 span;
     display: flex;
     gap: 24px;
+
+    @include tablet {
+      grid-column: 1 span;
+      flex-direction: column;
+    }
   }
 
   &__bot-inner {
@@ -488,6 +616,10 @@
 
     .modal__input {
       padding: 20px 24px 20px 52px;
+    }
+
+    @include tablet {
+      margin-bottom: 10px;
     }
 
     &::before {

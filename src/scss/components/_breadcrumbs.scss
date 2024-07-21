@@ -2,20 +2,41 @@
   padding-top: 192px;
   margin-bottom: 60px;
 
+  &--one {
+  }
+
+  @include tablet {
+    padding-top: 120px;
+    margin-bottom: 30px;
+  }
+
   &__list {
     display: flex;
     gap: 35px;
+    @include tablet {
+      flex-wrap: wrap;
+      row-gap: 10px;
+    }
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 16px;
+    }
   }
 
   &__nav {
     display: flex;
     gap: 60px;
+    justify-content: space-between;
+    @include tablet {
+      gap: 10px;
+    }
   }
 
   &__prev {

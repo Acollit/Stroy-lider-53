@@ -9,7 +9,7 @@
   &__block {
     border-radius: 16px;
     background: var(--white);
-
+    display: block;
     .image {
       border-radius: 16px;
 
@@ -41,6 +41,7 @@
   &__sublist {
     display: flex;
     flex-wrap: wrap;
+    gap: 4px;
     max-width: 270px;
   }
 

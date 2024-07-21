@@ -4,15 +4,39 @@
   position: fixed;
   width: 100%;
   z-index: 20;
+
+  @include tablet {
+    padding: 8px 5px 8px 5px;
+    background: var(--white);
+    border-radius: 16px;
+
+    width: 90%;
+    left: 5%;
+    top: 20px;
+  }
+
   &__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
+  &__logo {
+
+    @include tablet {
+      max-width: 55px;
+      height: 45px;
+    }
+
+  }
+
   &__contacts {
     display: flex;
     flex-direction: column;
+
+    @include big-desktop {
+      display: none;
+    }
   }
 
   &__phone {
@@ -60,11 +84,41 @@
   &__socials {
     display: flex;
     gap: 8px;
+
+    @include big-desktop {
+      display: none;
+    }
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__social {
+    opacity: 1;
+    transition: all .3s ease-in-out;
+    &:hover {
+      opacity: .6;
+    }
   }
 
   &__btn {
     max-width: 128px;
+
+    @include tablet {
+      display: none
+    }
   }
 
 
+}
+
+
+.burger {
+  @include burger;
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
 }

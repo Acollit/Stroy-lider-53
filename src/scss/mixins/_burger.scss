@@ -2,7 +2,7 @@
 
 @mixin burger {
   --burger-width: 30px;
-  --burger-height: 30px;
+  --burger-height: 20px;
   --burger-line-height: 2px;
 
   position: relative;
@@ -23,6 +23,7 @@
     height: var(--burger-line-height);
     background-color: currentColor;
     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    background-color: var(--primary-5o);
   }
 
   &::before {
@@ -42,6 +43,7 @@
     background-color: currentColor;
     transform: translateY(-50%);
     transition: transform 0.3s ease-in-out;
+    background-color: var(--primary-5o);
   }
 
   &--active {
@@ -60,6 +62,7 @@
     .burger__line {
       transform: scale(0);
       transition: transform 0.3s ease-in-out;
+
     }
   }
 }

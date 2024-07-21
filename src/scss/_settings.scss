@@ -88,7 +88,6 @@ a {
 }
 
 .dis-scroll {
-  position: fixed;
   left: 0;
   top: 0;
   overflow: hidden;
@@ -111,11 +110,16 @@ a {
   border-radius: 8px;
 
   font-family: var(--font-family);
-  font-weight: 400;
+  font-weight: 600;
   font-size: 18px;
   line-height: 140%;
   text-align: center;
   color: var(--white);
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    background-color: var(--primary---4o);
+  }
 }
 
 .section-title {
@@ -128,6 +132,17 @@ a {
   line-height: 161%;
   letter-spacing: -0.02em;
   color: var(--gray---9o);
+
+  @include tablet {
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: var(--gray---9o);
+    text-align: left;
+    margin-bottom: 36px;
+  }
 }
 
 

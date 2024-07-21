@@ -7,3 +7,5 @@ import './components/modal.js';
 import './components/slider.js';
 import './components/map.js';
 import './components/gallary.js';
+import './components/burger.js';
+import './components/validate.js';

@@ -7,13 +7,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: cover;
 
     &--blog {
       background-image: url(../img/block-title-1.webp);
+
+      @include tablet {
+        height: 265px;
+        border-radius: 16px;
+        background-image: url(../img/block-title-1-mb.webp);
+
+      }
     }
 
     &--credit {
       background-image: url(../img/block-title-2.webp);
+
+      @include tablet {
+        height: 265px;
+        border-radius: 16px;
+        background-image: url(../img/block-title-2-mb.webp);
+        padding: 20px;
+      }
     }
 
     &--order {
@@ -22,6 +37,23 @@
 
     &--stocks {
       background-image: url(../img/block-title-4.webp);
+
+      @include tablet {
+        height: 265px;
+        border-radius: 16px;
+        background-image: url(../img/block-title-4-mb.webp);
+      }
+    }
+
+    &--matcapital {
+      background-image: url(../img/block-title-5.webp);
+      height: 588px;
+
+      @include tablet {
+        height: 139px;
+        border-radius: 16px;
+        background-image: url(../img/block-title-5-mb.webp);
+      }
     }
   }
 
@@ -35,6 +67,8 @@
     text-align: center;
     color: var(--white);
 
+
+
     &--credit {
       font-family: var(--third-family);
       font-weight: 700;
@@ -43,10 +77,21 @@
       letter-spacing: -0.02em;
       text-align: center;
       color: var(--gray---8o);
+
+      @include tablet {
+        font-size: 24px;
+        line-height: 130%;
+        text-align: left;
+      }
     }
 
     &--accent {
       color: var(--primary-5o);
+    }
+
+    @include tablet {
+      font-size: 34px;
+      line-height: 130%;
     }
   }
 

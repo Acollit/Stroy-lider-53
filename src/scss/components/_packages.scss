@@ -1,11 +1,90 @@
 .packages {
-
   margin-bottom: 120px;
+
 
   &__content {
     border-radius: 16px;
     padding: 24px;
     background: var(--white);
+
+    @include tablet {
+      padding: 15px 5px;
+      background: var(--gray-04);
+    }
+
+    &--brus {
+      .packages__line {
+        grid-template-columns: 0.7fr repeat(2, 1fr);
+
+        @include tablet {
+          grid-template-columns: repeat(1, 1fr) 0.4fr 0.4fr;
+
+          &:nth-child(1) {
+            .packages__text {
+              color: #FFF;
+
+              @include tablet {
+                writing-mode: vertical-rl;
+                text-orientation: mixed;
+                transform: rotate(180deg);
+                max-height: 130px;
+                text-align: left;
+                font-size: 14px;
+                height: 100%;
+              }
+            }
+
+            .packages__title {
+
+              @include tablet {
+                max-height: 130px;
+
+              }
+            }
+          }
+
+
+        }
+
+
+
+        &:nth-child(4) {
+          .packages__col {
+            &:last-child {
+              grid-column: 2 span;
+            }
+          }
+        }
+
+        &:nth-child(5) {
+          .packages__col {
+            &:last-child {
+              grid-column: 2 span;
+            }
+          }
+        }
+      }
+
+      .packages__btn {
+        max-width: 488px;
+
+        @include tablet {
+          max-width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    @include tablet {
+      max-width: 24px;
+      height: 24px;
+      font-size: 0;
+      padding: 0;
+      background-image: url(../img/pac-link.svg);
+      border-radius: 50px;
+    }
   }
 
   &__line {
@@ -14,13 +93,37 @@
     padding: 10px 24px;
     border-radius: 16px;
 
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr) 0.4fr 0.4fr 0.4fr;
+      padding: 10px 8px;
+      background: var(--white);
+    }
+
     &:nth-child(1) {
       background: var(--primary---8o);
       margin-bottom: 20px;
 
       .packages__text {
         color: #FFF;
+
+        @include tablet {
+          writing-mode: vertical-rl;
+          text-orientation: mixed;
+          transform: rotate(180deg);
+          max-height: 150px;
+          text-align: left;
+          font-size: 14px;
+          height: 100%;
+        }
       }
+
+      @include tablet {
+        height: auto;
+      }
+    }
+
+    &:nth-child(2) {
+      background: var(--white);
     }
 
 
@@ -43,6 +146,7 @@
 
     &--blue {
       background: var(--gray-04);
+
     }
 
     &--accent {
@@ -51,6 +155,14 @@
 
       .packages__subtitle {
         font-weight: 600;
+      }
+
+      @include tablet {
+        .packages__col {
+          &:first-child {
+            grid-column: 3 span;
+          }
+        }
       }
     }
   }
@@ -73,6 +185,16 @@
     font-size: 20px;
     line-height: 120%;
     color: var(--white);
+
+    @include tablet {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(180deg);
+      max-height: 178px;
+      text-align: left;
+      font-size: 14px;
+      max-height: 150px;
+    }
   }
 
   &__subtitle {
@@ -82,6 +204,11 @@
     font-size: 18px;
     line-height: 140%;
     color: var(--gray---9o);
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 120%;
+    }
   }
 
   &__text {
@@ -96,6 +223,17 @@
   &__gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    border-radius: 24px;
+
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 12px;
+    }
+
+    .image {
+      border-radius: 24px;
+    }
   }
 
   .tabs {
